@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FPD(Frame Policy Dictionary)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "frame",
+    "thresholds",
+    "persistence",
+    "hysteresis",
+    "harvest_policy"
+  ],
+  "properties": {
+    "frame": {
+      "type": "string"
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alpha",
+        "delta"
+      ],
+      "properties": {
+        "alpha": {
+          "type": "number"
+        },
+        "delta": {
+          "type": "number"
+        },
+        "shift": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "risk": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "persistence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "windowMin",
+        "minHits",
+        "cooldownMin"
+      ],
+      "properties": {
+        "windowMin": {
+          "type": "integer"
+        },
+        "minHits": {
+          "type": "integer"
+        },
+        "cooldownMin": {
+          "type": "integer"
+        }
+      }
+    },
+    "hysteresis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "up",
+        "down"
+      ],
+      "properties": {
+        "up": {
+          "type": "number"
+        },
+        "down": {
+          "type": "number"
+        }
+      }
+    },
+    "harvest_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "levels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "level",
+              "when",
+              "queries",
+              "sources"
+            ],
+            "properties": {
+              "level": {
+                "type": "string",
+                "enum": [
+                  "L1",
+                  "L2"
+                ]
+              },
+              "when": {
+                "type": "string"
+              },
+              "queries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "maxDocsPer24h",
+            "burst"
+          ],
+          "properties": {
+            "maxDocsPer24h": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "burst": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "alert_policy": {
+      "type": "object"
+    }
+  }
+}

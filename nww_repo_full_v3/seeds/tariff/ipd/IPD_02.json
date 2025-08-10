@@ -1,0 +1,10 @@
+{
+  "pair": "ECONOMIC→export_value",
+  "lagPeakDays": 7,
+  "halfLifeDays": 14,
+  "watchWindowDays": 21,
+  "controlsUsed": [
+    "seasonality",
+    "fx"
+  ]
+}

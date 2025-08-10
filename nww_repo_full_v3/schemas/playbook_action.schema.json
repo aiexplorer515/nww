@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PlaybookAction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "action_id",
+    "name",
+    "params",
+    "status",
+    "createdAt",
+    "versions"
+  ],
+  "properties": {
+    "action_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "params": {
+      "type": "object"
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "done",
+        "failed"
+      ]
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "esd_ver": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

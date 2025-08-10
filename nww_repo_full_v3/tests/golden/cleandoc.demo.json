@@ -1,0 +1,16 @@
+{
+  "id": "D_2025_000001",
+  "text": "Clean body long enough to pass threshold ...",
+  "lang": "en",
+  "meta": {
+    "title": "Tariff talks"
+  },
+  "norm": {
+    "hash": "sha256:abc",
+    "boilerplate_ratio": 0.07
+  },
+  "lineage": {
+    "source": "tierA",
+    "period": "2025-08"
+  }
+}

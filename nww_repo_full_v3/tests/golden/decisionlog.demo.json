@@ -1,0 +1,17 @@
+{
+  "module": "M07_FPD",
+  "action": "ELIGIBLE",
+  "target_id": "E_2025_TAR001",
+  "payload": {
+    "alpha": 0.72,
+    "delta": 0.1
+  },
+  "timestamp": "2025-08-10T22:25:11Z",
+  "versions": {
+    "fpd_ver": "fpd-0.3",
+    "esd_ver": "esd-0.1",
+    "lex_ver": "lex-0.5",
+    "ipd_ver": "ipd-0.1",
+    "prompt_id": "lex-judge-001"
+  }
+}

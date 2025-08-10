@@ -1,0 +1,59 @@
+{
+  "frame": "REGULATORY",
+  "thresholds": {
+    "alpha": 0.7,
+    "delta": 0.1,
+    "shift": 0.16,
+    "risk": 0.6
+  },
+  "persistence": {
+    "windowMin": 90,
+    "minHits": 2,
+    "cooldownMin": 180
+  },
+  "hysteresis": {
+    "up": 0.76,
+    "down": 0.68
+  },
+  "harvest_policy": {
+    "levels": [
+      {
+        "level": "L1",
+        "when": "score>=alpha",
+        "queries": [
+          "{term} decree",
+          "{term} ordinance",
+          "{term} WTO notification"
+        ],
+        "sources": [
+          "gov",
+          "wto",
+          "tierA"
+        ]
+      },
+      {
+        "level": "L2",
+        "when": "score>=up && indicator_deviation",
+        "queries": [
+          "{term} customs notice",
+          "{term} WTO dispute"
+        ],
+        "sources": [
+          "gov",
+          "wto",
+          "legal"
+        ]
+      }
+    ],
+    "budget": {
+      "maxDocsPer24h": 12000,
+      "burst": 3000
+    }
+  },
+  "alert_policy": {
+    "severity": {
+      "indicator_deviation+frame": "HIGH",
+      "single": "MEDIUM"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AuditEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "audit_id",
+    "actor",
+    "action",
+    "target",
+    "timestamp"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "user",
+            "system"
+          ]
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "VIEW",
+        "UPDATE",
+        "DECIDE",
+        "CONFIG_CHANGE"
+      ]
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "event",
+            "hitl",
+            "config",
+            "model"
+          ]
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

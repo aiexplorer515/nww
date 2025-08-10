@@ -1,0 +1,20 @@
+{
+  "id": "P_MINISTER_X",
+  "canonicalName": "Minister X",
+  "aliases": [
+    "M. X"
+  ],
+  "country": "KR",
+  "roles": [
+    {
+      "title": "Trade Minister",
+      "org_id": "O_GOV",
+      "startDate": "2023-01-01",
+      "endDate": null
+    }
+  ],
+  "lineage": {
+    "source": "tierA",
+    "period": "2025-08"
+  }
+}

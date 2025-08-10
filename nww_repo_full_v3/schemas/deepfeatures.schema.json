@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DeepFeatures",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "topics",
+    "keyphrases",
+    "versions"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "sentiment": {
+      "type": "object",
+      "properties": {
+        "valence": {
+          "type": "number"
+        },
+        "stance": {
+          "type": "string"
+        }
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "keyphrases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "explanations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lex_ver": {
+          "type": "string"
+        },
+        "prompt_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

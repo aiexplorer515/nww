@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario_id",
+    "event_id",
+    "outline",
+    "evidence",
+    "createdAt"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "outline": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "likelihood": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "impact": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

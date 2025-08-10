@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FrameScore",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "scores",
+    "margin",
+    "features",
+    "prompt_id",
+    "lex_ver"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "scores": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "frame",
+          "score"
+        ],
+        "properties": {
+          "frame": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "margin": {
+      "type": "number"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prompt_id": {
+      "type": "string"
+    },
+    "lex_ver": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IPD(Impact Profile Dictionary)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pair",
+    "lagPeakDays",
+    "halfLifeDays",
+    "watchWindowDays"
+  ],
+  "properties": {
+    "pair": {
+      "type": "string"
+    },
+    "lagPeakDays": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "halfLifeDays": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "watchWindowDays": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "controlsUsed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "pair": "REGULATORY→wto_dispute_filings",
+  "lagPeakDays": 0,
+  "halfLifeDays": 30,
+  "watchWindowDays": 60,
+  "controlsUsed": []
+}

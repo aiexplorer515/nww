@@ -1,0 +1,42 @@
+{
+  "vec_id": "V_001",
+  "type": "event",
+  "ref": {
+    "event_id": "E_2025_TAR001"
+  },
+  "vector": [
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "meta": {
+    "lang": "en",
+    "model": "text-emb-v1",
+    "index": "idx_event_en_v1",
+    "source": "tierA",
+    "hash": "fp123",
+    "frame_hint": [
+      {
+        "name": "ECONOMIC",
+        "score": 0.78
+      }
+    ],
+    "versions": {
+      "lex_ver": "lex-0.5",
+      "fpd_ver": "fpd-0.3"
+    }
+  }
+}

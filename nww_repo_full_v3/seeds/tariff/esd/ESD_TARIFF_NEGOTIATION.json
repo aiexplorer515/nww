@@ -1,0 +1,79 @@
+{
+  "domain_id": "D_TARIFF_NEGOTIATION",
+  "frames": [
+    {
+      "name": "ECONOMIC",
+      "fpd_ref": "FPD_ECONOMIC"
+    },
+    {
+      "name": "REGULATORY",
+      "fpd_ref": "FPD_REGULATORY"
+    }
+  ],
+  "indicators": [
+    {
+      "metric": "price_index",
+      "formula": "mom_pct",
+      "crisis_rules": [
+        {
+          "type": "threshold",
+          "op": ">=",
+          "value": 1.5,
+          "window": "3d"
+        }
+      ],
+      "ipd_ref": "IPD_01"
+    },
+    {
+      "metric": "export_value",
+      "formula": "wow_pct",
+      "crisis_rules": [
+        {
+          "type": "threshold",
+          "op": "<=",
+          "value": -4.0,
+          "window": "7d"
+        }
+      ],
+      "ipd_ref": "IPD_02"
+    },
+    {
+      "metric": "wto_dispute_filings",
+      "formula": "count_30d",
+      "crisis_rules": [
+        {
+          "type": "threshold",
+          "op": ">=",
+          "value": 1,
+          "window": "30d"
+        }
+      ],
+      "ipd_ref": "IPD_04"
+    }
+  ],
+  "crisis_logic": "(frame(ECONOMIC)>=α && indicator(price_index)) || (frame(REGULATORY)>=α && indicator(wto_dispute_filings))",
+  "scenario_templates": [
+    {
+      "id": "S_TARIFF_ESCALATION",
+      "outline": "{agent} raises {instrument} on {target} → supply risk"
+    },
+    {
+      "id": "S_NEGOTIATION_BREAKDOWN",
+      "outline": "Talks stall; partner readies retaliation"
+    }
+  ],
+  "harvest_templates": {
+    "L1": [
+      "{term} tariff",
+      "{term} import duty"
+    ],
+    "L2": [
+      "{term} retaliation",
+      "{term} WTO dispute"
+    ]
+  },
+  "version": {
+    "esd_ver": "esd-0.1",
+    "updated_at": "2025-08-10T22:26:24Z"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DecisionLog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "module",
+    "action",
+    "target_id",
+    "timestamp",
+    "versions"
+  ],
+  "properties": {
+    "module": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "object",
+      "properties": {
+        "fpd_ver": {
+          "type": "string"
+        },
+        "esd_ver": {
+          "type": "string"
+        },
+        "lex_ver": {
+          "type": "string"
+        },
+        "ipd_ver": {
+          "type": "string"
+        },
+        "prompt_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

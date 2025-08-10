@@ -1,0 +1,26 @@
+{
+  "event_id": "E_2025_TAR001",
+  "sentiment": {
+    "valence": 0.12,
+    "stance": "neutral"
+  },
+  "topics": [
+    "tariff",
+    "semiconductor",
+    "retaliation"
+  ],
+  "keyphrases": [
+    "HS-8542",
+    "domestic producers"
+  ],
+  "clusters": [
+    "C_2025_07#12"
+  ],
+  "explanations": [
+    "top tokens/phrases..."
+  ],
+  "versions": {
+    "lex_ver": "lex-0.5",
+    "prompt_id": "deep-001"
+  }
+}

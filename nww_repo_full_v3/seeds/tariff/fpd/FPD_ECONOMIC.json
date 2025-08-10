@@ -1,0 +1,60 @@
+{
+  "frame": "ECONOMIC",
+  "thresholds": {
+    "alpha": 0.72,
+    "delta": 0.1,
+    "shift": 0.18,
+    "risk": 0.65
+  },
+  "persistence": {
+    "windowMin": 60,
+    "minHits": 2,
+    "cooldownMin": 120
+  },
+  "hysteresis": {
+    "up": 0.78,
+    "down": 0.7
+  },
+  "harvest_policy": {
+    "levels": [
+      {
+        "level": "L1",
+        "when": "score>=alpha && shift>=0.15",
+        "queries": [
+          "{term} tariff",
+          "{term} import duty",
+          "{term} HS code"
+        ],
+        "sources": [
+          "tierA",
+          "gov",
+          "news"
+        ]
+      },
+      {
+        "level": "L2",
+        "when": "risk>=0.65 || multi_frame",
+        "queries": [
+          "{term} retaliation",
+          "{term} safeguard",
+          "{term} antidumping"
+        ],
+        "sources": [
+          "tierA",
+          "legal",
+          "trade"
+        ]
+      }
+    ],
+    "budget": {
+      "maxDocsPer24h": 20000,
+      "burst": 5000
+    }
+  },
+  "alert_policy": {
+    "severity": {
+      "multi+indicator": "HIGH",
+      "single": "MEDIUM"
+    }
+  }
+}

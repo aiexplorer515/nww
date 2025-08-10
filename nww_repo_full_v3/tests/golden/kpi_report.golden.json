@@ -1,0 +1,31 @@
+{
+  "run_id": "KPI_2025_08_10",
+  "window": "2025-08-09..2025-08-10",
+  "cohort": "tariff",
+  "metrics": {
+    "precision_p1": 0.81,
+    "kappa": 0.76,
+    "yield_delta_pct": 0.28,
+    "tte_hours": 1.7,
+    "cost_delta_pct": 0.12,
+    "evidence_completeness": 1.0
+  },
+  "gate": {
+    "passed": true,
+    "rules": [
+      "p1+≥3pp_or_tte−30%",
+      "kappa≥0.75",
+      "yield+≥25%",
+      "tte≤2h",
+      "cost+≤15%",
+      "evidence=100%"
+    ]
+  },
+  "createdAt": "2025-08-10T22:25:11Z",
+  "versions": {
+    "fpd_ver": "fpd-0.3",
+    "esd_ver": "esd-0.1",
+    "lex_ver": "lex-0.5",
+    "ipd_ver": "ipd-0.1"
+  }
+}

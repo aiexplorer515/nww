@@ -1,0 +1,13 @@
+
+name: nww-ci
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install jsonschema==4.21.1
+      - run: python scripts/schema_validate.py --schemas schemas --golden tests/golden
+      - run: python scripts/smoke_flow.py

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Indicator",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metric",
+    "value",
+    "unit",
+    "date",
+    "source"
+  ],
+  "properties": {
+    "metric": {
+      "type": "string"
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "topic_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

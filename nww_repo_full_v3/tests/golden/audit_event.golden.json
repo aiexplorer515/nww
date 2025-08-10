@@ -1,0 +1,17 @@
+{
+  "audit_id": "AUD_2025_0007",
+  "actor": {
+    "type": "user",
+    "id": "U_42"
+  },
+  "action": "DECIDE",
+  "target": {
+    "type": "hitl",
+    "id": "HITL_2025_0001"
+  },
+  "timestamp": "2025-08-10T22:25:11Z",
+  "metadata": {
+    "ip": "203.0.113.10",
+    "reason": "quality_check"
+  }
+}

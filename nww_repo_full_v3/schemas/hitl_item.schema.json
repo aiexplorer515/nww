@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HITLItem",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hitl_id",
+    "event_id",
+    "reason",
+    "snapshot",
+    "evidence",
+    "priority",
+    "sla_minutes",
+    "createdAt",
+    "versions"
+  ],
+  "properties": {
+    "hitl_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "ambiguous",
+        "low_margin",
+        "policy_flag"
+      ]
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "s1",
+        "s2",
+        "alpha",
+        "delta",
+        "margin",
+        "top_frames"
+      ],
+      "properties": {
+        "s1": {
+          "type": "number"
+        },
+        "s2": {
+          "type": "number"
+        },
+        "alpha": {
+          "type": "number"
+        },
+        "delta": {
+          "type": "number"
+        },
+        "margin": {
+          "type": "number"
+        },
+        "top_frames": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "frame",
+              "score"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "frame": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    "sla_minutes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fpd_ver",
+        "lex_ver",
+        "prompt_id"
+      ],
+      "properties": {
+        "fpd_ver": {
+          "type": "string"
+        },
+        "esd_ver": {
+          "type": "string"
+        },
+        "lex_ver": {
+          "type": "string"
+        },
+        "ipd_ver": {
+          "type": "string"
+        },
+        "prompt_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

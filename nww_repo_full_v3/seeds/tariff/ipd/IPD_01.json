@@ -1,0 +1,9 @@
+{
+  "pair": "ECONOMIC→price_index",
+  "lagPeakDays": 2,
+  "halfLifeDays": 5,
+  "watchWindowDays": 7,
+  "controlsUsed": [
+    "seasonality"
+  ]
+}

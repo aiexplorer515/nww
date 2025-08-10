@@ -1,0 +1,29 @@
+{
+  "hitl_id": "HITL_2025_0001",
+  "decision": "CONFIRM",
+  "assigned_frames": [
+    {
+      "frame": "ECONOMIC",
+      "role": "primary"
+    }
+  ],
+  "notes": "margin low but evidence supports ECONOMIC",
+  "reviewer": {
+    "user_id": "U_42",
+    "role": "analyst",
+    "coi_checked": true
+  },
+  "qa_checklist": {
+    "evidence2": true,
+    "lineage_ok": true,
+    "policy_ok": true
+  },
+  "decidedAt": "2025-08-10T22:25:11Z",
+  "versions": {
+    "fpd_ver": "fpd-0.3",
+    "esd_ver": "esd-0.1",
+    "lex_ver": "lex-0.5",
+    "ipd_ver": "ipd-0.1",
+    "prompt_id": "hitl-ui-001"
+  }
+}

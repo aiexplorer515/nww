@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidenceCard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "doc_id",
+    "citedSentences",
+    "lineage"
+  ],
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "chosenFrames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "citedSentences": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "topFeatures": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "required": [
+        "source"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "decisionRule": {
+      "type": "object",
+      "properties": {
+        "alpha": {
+          "type": "number"
+        },
+        "delta": {
+          "type": "number"
+        },
+        "mode": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

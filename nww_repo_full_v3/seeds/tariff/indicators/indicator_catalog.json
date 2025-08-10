@@ -1,0 +1,39 @@
+{
+  "metrics": [
+    {
+      "metric": "price_index",
+      "unit": "index",
+      "freq": "D/W/M",
+      "source_hint": [
+        "OECD",
+        "BLS"
+      ]
+    },
+    {
+      "metric": "export_value",
+      "unit": "USD",
+      "freq": "D/W/M",
+      "source_hint": [
+        "UN Comtrade",
+        "Customs"
+      ]
+    },
+    {
+      "metric": "import_price_index",
+      "unit": "index",
+      "freq": "M",
+      "source_hint": [
+        "OECD",
+        "BLS"
+      ]
+    },
+    {
+      "metric": "wto_dispute_filings",
+      "unit": "count",
+      "freq": "event",
+      "source_hint": [
+        "WTO"
+      ]
+    }
+  ]
+}

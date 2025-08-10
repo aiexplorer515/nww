@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VectorItem",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vec_id",
+    "type",
+    "vector",
+    "meta",
+    "ref"
+  ],
+  "properties": {
+    "vec_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "sentence",
+        "doc",
+        "evidence",
+        "event",
+        "person",
+        "pattern",
+        "frame_anchor"
+      ]
+    },
+    "ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "type": "string"
+        },
+        "person_id": {
+          "type": "string"
+        },
+        "doc_id": {
+          "type": "string"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "event_id"
+          ]
+        },
+        {
+          "required": [
+            "person_id"
+          ]
+        },
+        {
+          "required": [
+            "doc_id"
+          ]
+        }
+      ]
+    },
+    "vector": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "number"
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lang": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "index": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "frame_hint": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "versions": {
+          "type": "object",
+          "properties": {
+            "lex_ver": {
+              "type": "string"
+            },
+            "fpd_ver": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

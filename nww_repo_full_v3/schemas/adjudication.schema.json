@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Adjudication",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hitl_id",
+    "decision",
+    "assigned_frames",
+    "notes",
+    "reviewer",
+    "qa_checklist",
+    "decidedAt",
+    "versions"
+  ],
+  "properties": {
+    "hitl_id": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "CONFIRM",
+        "REJECT",
+        "MULTI",
+        "ESCALATE"
+      ]
+    },
+    "assigned_frames": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "frame",
+          "role"
+        ],
+        "properties": {
+          "frame": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "secondary"
+            ]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user_id",
+        "role",
+        "coi_checked"
+      ],
+      "properties": {
+        "user_id": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "coi_checked": {
+          "type": "boolean"
+        }
+      }
+    },
+    "qa_checklist": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence2",
+        "lineage_ok",
+        "policy_ok"
+      ],
+      "properties": {
+        "evidence2": {
+          "type": "boolean"
+        },
+        "lineage_ok": {
+          "type": "boolean"
+        },
+        "policy_ok": {
+          "type": "boolean"
+        }
+      }
+    },
+    "decidedAt": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fpd_ver",
+        "esd_ver",
+        "lex_ver",
+        "ipd_ver",
+        "prompt_id"
+      ],
+      "properties": {
+        "fpd_ver": {
+          "type": "string"
+        },
+        "esd_ver": {
+          "type": "string"
+        },
+        "lex_ver": {
+          "type": "string"
+        },
+        "ipd_ver": {
+          "type": "string"
+        },
+        "prompt_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

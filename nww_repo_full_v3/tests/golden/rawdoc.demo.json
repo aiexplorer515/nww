@@ -1,0 +1,17 @@
+{
+  "id": "D_2025_000001",
+  "source": "rss",
+  "fetched_at": "2025-08-10T22:25:11Z",
+  "raw": {
+    "text": "...",
+    "html": null,
+    "media_refs": []
+  },
+  "meta": {
+    "url": "https://example.com"
+  },
+  "lineage": {
+    "source": "tierA",
+    "period": "2025-08"
+  }
+}

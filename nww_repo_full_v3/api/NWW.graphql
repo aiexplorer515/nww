@@ -1,0 +1,11 @@
+
+type Role { title: String, orgId: ID, startDate: String, endDate: String }
+type Person { id: ID!, canonicalName: String!, aliases: [String!], country: String, roles: [Role!] }
+type Metric { name: String!, value: Float!, unit: String }
+type EventArgs { agentId: ID!, targetId: ID, instrument: String, status: String }
+type EventLinks { persons: [ID!], orgs: [ID!] }
+type Event { id: ID!, schema: String!, time: String!, place: String, args: EventArgs!, links: EventLinks, metrics: [Metric!] }
+type Evidence { docId: ID!, citedSentences: [String!]!, lineageSource: String }
+type FrameScoreItem { frame: String!, score: Float! }
+type FrameScore { eventId: ID!, scores: [FrameScoreItem!]!, margin: Float! }
+type Query { person(id: ID!): Person, event(id: ID!): Event }

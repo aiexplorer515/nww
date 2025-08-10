@@ -1,0 +1,43 @@
+{
+  "frame": "ECONOMIC",
+  "thresholds": {
+    "alpha": 0.72,
+    "delta": 0.1,
+    "shift": 0.18,
+    "risk": 0.65
+  },
+  "persistence": {
+    "windowMin": 45,
+    "minHits": 2,
+    "cooldownMin": 120
+  },
+  "hysteresis": {
+    "up": 0.78,
+    "down": 0.7
+  },
+  "harvest_policy": {
+    "levels": [
+      {
+        "level": "L1",
+        "when": "score>=alpha",
+        "queries": [
+          "{term} tariff"
+        ],
+        "sources": [
+          "tierA",
+          "gov"
+        ]
+      }
+    ],
+    "budget": {
+      "maxDocsPer24h": 20000,
+      "burst": 5000
+    }
+  },
+  "alert_policy": {
+    "severity": {
+      "multi+indicator": "HIGH",
+      "single": "MEDIUM"
+    }
+  }
+}

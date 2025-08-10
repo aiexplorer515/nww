@@ -1,0 +1,21 @@
+{
+  "event_id": "E_2025_TAR001",
+  "scores": [
+    {
+      "frame": "ECONOMIC",
+      "score": 0.82
+    },
+    {
+      "frame": "REGULATORY",
+      "score": 0.69
+    }
+  ],
+  "margin": 0.13,
+  "features": [
+    "tariff",
+    "HS-8542",
+    "retaliation_pattern#12"
+  ],
+  "prompt_id": "lex-judge-001",
+  "lex_ver": "lex-0.5"
+}

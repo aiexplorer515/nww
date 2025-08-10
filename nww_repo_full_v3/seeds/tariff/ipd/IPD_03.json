@@ -1,0 +1,10 @@
+{
+  "pair": "ECONOMIC→import_price_index",
+  "lagPeakDays": 3,
+  "halfLifeDays": 10,
+  "watchWindowDays": 14,
+  "controlsUsed": [
+    "seasonality",
+    "oil"
+  ]
+}

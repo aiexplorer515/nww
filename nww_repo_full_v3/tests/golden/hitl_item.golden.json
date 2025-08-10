@@ -1,0 +1,34 @@
+{
+  "hitl_id": "HITL_2025_0001",
+  "event_id": "E_2025_TAR001",
+  "reason": "ambiguous",
+  "snapshot": {
+    "s1": 0.71,
+    "s2": 0.66,
+    "alpha": 0.72,
+    "delta": 0.1,
+    "margin": 0.05,
+    "top_frames": [
+      {
+        "frame": "ECONOMIC",
+        "score": 0.71
+      },
+      {
+        "frame": "REGULATORY",
+        "score": 0.66
+      }
+    ]
+  },
+  "evidence": [
+    "D_0001",
+    "D_0002"
+  ],
+  "priority": "P1",
+  "sla_minutes": 30,
+  "createdAt": "2025-08-10T22:25:11Z",
+  "versions": {
+    "fpd_ver": "fpd-0.3",
+    "lex_ver": "lex-0.5",
+    "prompt_id": "lex-judge-001"
+  }
+}

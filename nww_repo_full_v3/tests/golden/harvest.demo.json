@@ -1,0 +1,18 @@
+{
+  "harvest_id": "H_2025_0001",
+  "level": "L1",
+  "frame": "ECONOMIC",
+  "reason": "score>=alpha",
+  "queries": [
+    "tariff {term}"
+  ],
+  "sources": [
+    "tierA",
+    "gov"
+  ],
+  "budget": {
+    "maxDocs": 10000,
+    "burst": 2000
+  },
+  "createdAt": "2025-08-10T22:25:11Z"
+}

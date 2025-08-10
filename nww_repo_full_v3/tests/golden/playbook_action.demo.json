@@ -1,0 +1,16 @@
+{
+  "action_id": "PB_2025_0001",
+  "name": "Initiate bilateral talks",
+  "params": {
+    "counterparty": "O_PARTNER",
+    "deadline": "2025-08-15"
+  },
+  "preconditions": [
+    "crisis_level>=MEDIUM"
+  ],
+  "status": "queued",
+  "createdAt": "2025-08-10T22:25:11Z",
+  "versions": {
+    "esd_ver": "esd-0.1"
+  }
+}

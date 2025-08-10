@@ -1,0 +1,27 @@
+{
+  "doc_id": "D_2025_000001",
+  "chosenFrames": [
+    {
+      "name": "ECONOMIC",
+      "role": "primary",
+      "score": 0.8
+    }
+  ],
+  "citedSentences": [
+    "Announcement of a 25% tariff.",
+    "Officials expect retaliation."
+  ],
+  "topFeatures": [
+    "tariff",
+    "retaliation"
+  ],
+  "lineage": {
+    "source": "tierA",
+    "period": "2025-08"
+  },
+  "decisionRule": {
+    "alpha": 0.72,
+    "delta": 0.1,
+    "mode": "single"
+  }
+}

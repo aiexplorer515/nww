@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CleanDoc",
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "lang",
+    "lineage"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 20
+    },
+    "lang": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "object"
+    },
+    "norm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hash": {
+          "type": "string"
+        },
+        "boilerplate_ratio": {
+          "type": "number"
+        }
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "required": [
+        "source"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FinalReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "event_id",
+    "summary",
+    "findings",
+    "frames",
+    "createdAt",
+    "versions"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "frames": {
+      "type": "object"
+    },
+    "indicators": {
+      "type": "object"
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fpd_ver": {
+          "type": "string"
+        },
+        "esd_ver": {
+          "type": "string"
+        },
+        "lex_ver": {
+          "type": "string"
+        },
+        "ipd_ver": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

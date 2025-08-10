@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DriftReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "feature",
+    "stat",
+    "thresholds",
+    "status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "string"
+    },
+    "stat": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "psi": {
+          "type": "number"
+        },
+        "kl": {
+          "type": "number"
+        }
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "psi_max": {
+          "type": "number"
+        },
+        "kl_max": {
+          "type": "number"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "WARN",
+        "FAIL"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "DRIFT_2025_08_10",
+  "feature": "frame_distribution",
+  "stat": {
+    "psi": 0.14,
+    "kl": 0.06
+  },
+  "thresholds": {
+    "psi_max": 0.2,
+    "kl_max": 0.1
+  },
+  "status": "OK",
+  "notes": "REGULATORY frame share +4pp",
+  "timestamp": "2025-08-10T22:25:11Z"
+}

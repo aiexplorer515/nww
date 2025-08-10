@@ -1,0 +1,25 @@
+{
+  "alert_id": "A_2025_0001",
+  "severity": "MEDIUM",
+  "event_id": "E_2025_TAR001",
+  "title": "Escalation risk detected",
+  "message": "ESD rules fired for ECONOMIC frame.",
+  "links": {
+    "report_id": "R_2025_0001",
+    "scenarios": [
+      "S_2025_0001"
+    ],
+    "evidence": [
+      "D_2025_000001"
+    ]
+  },
+  "channels": [
+    "email",
+    "slack"
+  ],
+  "createdAt": "2025-08-10T22:25:11Z",
+  "versions": {
+    "fpd_ver": "fpd-0.3",
+    "esd_ver": "esd-0.1"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "domain_id": "D_TARIFF_NEGOTIATION",
+  "frames": [
+    {
+      "name": "ECONOMIC",
+      "fpd_ref": "fpd-0.3#ECONOMIC"
+    }
+  ],
+  "indicators": [
+    {
+      "metric": "price_index",
+      "formula": "mom_pct",
+      "crisis_rules": [
+        {
+          "type": "threshold",
+          "op": ">=",
+          "value": 1.5,
+          "window": "3d"
+        }
+      ],
+      "ipd_ref": "ipd-0.1#ECONOMIC→price_index"
+    }
+  ],
+  "crisis_logic": "frame(ECO)>=α && indicator(price_index)",
+  "scenario_templates": [
+    {
+      "id": "S_TARIFF_ESCALATION",
+      "outline": "{agent} raises duty"
+    }
+  ],
+  "harvest_templates": {
+    "L1": [
+      "{term} tariff"
+    ]
+  },
+  "version": {
+    "esd_ver": "esd-0.1",
+    "updated_at": "2025-08-10T22:25:11Z"
+  }
+}

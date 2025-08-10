@@ -1,0 +1,38 @@
+{
+  "report_id": "R_2025_0001",
+  "event_id": "E_2025_TAR001",
+  "summary": "Escalation risk observed.",
+  "findings": [
+    {
+      "id": "F1",
+      "title": "Tariff escalation",
+      "evidence": [
+        "D_2025_000001"
+      ]
+    }
+  ],
+  "frames": {
+    "ECONOMIC": 0.82,
+    "REGULATORY": 0.69
+  },
+  "indicators": {
+    "price_index.mom_pct": 1.6
+  },
+  "scenarios": [
+    "S_2025_0001"
+  ],
+  "recommendations": [
+    {
+      "id": "A1",
+      "text": "Initiate bilateral talks",
+      "rationale": "..."
+    }
+  ],
+  "createdAt": "2025-08-10T22:25:11Z",
+  "versions": {
+    "fpd_ver": "fpd-0.3",
+    "esd_ver": "esd-0.1",
+    "lex_ver": "lex-0.5",
+    "ipd_ver": "ipd-0.1"
+  }
+}

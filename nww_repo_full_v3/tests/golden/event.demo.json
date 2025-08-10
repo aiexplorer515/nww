@@ -1,0 +1,31 @@
+{
+  "id": "E_2025_TAR001",
+  "schema": "TARIFF_ACTION",
+  "time": "2025-08-10T22:25:11Z",
+  "place": "Seoul",
+  "args": {
+    "agent_id": "P_MINISTER_X",
+    "target_id": "O_PARTNER",
+    "instrument": "tariff_25pct",
+    "status": "created"
+  },
+  "links": {
+    "persons": [
+      "P_MINISTER_X"
+    ],
+    "orgs": [
+      "O_PARTNER"
+    ]
+  },
+  "metrics": [
+    {
+      "name": "value",
+      "unit": "pct",
+      "value": 25.0
+    }
+  ],
+  "lineage": {
+    "source": "tierA",
+    "period": "2025-08"
+  }
+}

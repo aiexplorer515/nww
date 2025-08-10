@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HarvestEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "harvest_id",
+    "level",
+    "frame",
+    "reason",
+    "queries",
+    "sources",
+    "budget",
+    "createdAt"
+  ],
+  "properties": {
+    "harvest_id": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "L1",
+        "L2"
+      ]
+    },
+    "frame": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "queries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxDocs": {
+          "type": "integer"
+        },
+        "burst": {
+          "type": "integer"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  }
+}

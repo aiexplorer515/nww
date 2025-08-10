@@ -1,0 +1,11 @@
+{
+  "candidate": "fpd-0.3 + lex-0.5",
+  "stage": "A/B",
+  "decision": "PROMOTE",
+  "rationale": "p1 +3.2pp and tte −31%",
+  "timestamp": "2025-08-10T22:25:11Z",
+  "owners": [
+    "U_42",
+    "U_07"
+  ]
+}

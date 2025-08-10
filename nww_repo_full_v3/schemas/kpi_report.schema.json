@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KPIReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "window",
+    "cohort",
+    "metrics",
+    "gate",
+    "versions"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "window": {
+      "type": "string"
+    },
+    "cohort": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "precision_p1",
+        "kappa",
+        "yield_delta_pct",
+        "tte_hours",
+        "cost_delta_pct",
+        "evidence_completeness"
+      ],
+      "properties": {
+        "precision_p1": {
+          "type": "number"
+        },
+        "kappa": {
+          "type": "number"
+        },
+        "yield_delta_pct": {
+          "type": "number"
+        },
+        "tte_hours": {
+          "type": "number"
+        },
+        "cost_delta_pct": {
+          "type": "number"
+        },
+        "evidence_completeness": {
+          "type": "number"
+        }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passed",
+        "rules"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fpd_ver",
+        "esd_ver",
+        "lex_ver",
+        "ipd_ver"
+      ],
+      "properties": {
+        "fpd_ver": {
+          "type": "string"
+        },
+        "esd_ver": {
+          "type": "string"
+        },
+        "lex_ver": {
+          "type": "string"
+        },
+        "ipd_ver": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

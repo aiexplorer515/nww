@@ -1,0 +1,12 @@
+{
+  "scenario_id": "S_2025_0001",
+  "event_id": "E_2025_TAR001",
+  "outline": "Retaliation risk if talks fail.",
+  "evidence": [
+    "D_2025_000001",
+    "D_2025_000099"
+  ],
+  "createdAt": "2025-08-10T22:25:11Z",
+  "likelihood": 0.6,
+  "impact": 0.7
+}
