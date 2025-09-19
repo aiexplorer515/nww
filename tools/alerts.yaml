@@ -1,0 +1,4 @@
+# config/alerts.yaml
+thresholds:
+  warn:  0.55
+  alert: 0.70

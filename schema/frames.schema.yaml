@@ -1,0 +1,15 @@
+name: frames.schema.v1
+required:
+  - id:int|str
+  - frame.label:str
+  - frame.conf:float
+  - frame.scores:dict
+types:
+  id: [int, str]
+  frame: dict
+  frame.label: str
+  frame.conf: float|int
+  frame.scores: dict
+constraints:
+  frame.conf: range=[0,1]
+allow_extra: true

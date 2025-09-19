@@ -1,0 +1,5 @@
+fusion:
+  indicator: 1.0   # (MVP) 우선 인디케이터만
+thresholds:
+  alert_on: 0.70
+  alert_off: 0.55

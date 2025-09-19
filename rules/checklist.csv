@@ -1,0 +1,4 @@
+pattern,weight,domain,label
+군사|미사일|훈련,0.25,military,군사/무력
+긴장|협상|회담|제재,0.25,diplomacy,정치/외교 긴장
+관세|수출|환율|물가|성장률,0.25,economy,경제

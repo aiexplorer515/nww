@@ -1,0 +1,14 @@
+name: kyw.schema.v1
+required:
+  - id:int|str
+  - keywords:list
+types:
+  id: [int, str]
+  keywords: list
+  keywords[].text: str
+  keywords[].score: float|int
+  keywords[].src: str
+constraints:
+  keywords[].text: minlen=1
+  keywords[].score: range=[0, +inf)
+allow_extra: true

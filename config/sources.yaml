@@ -1,0 +1,27 @@
+# Sources configuration for data ingestion
+headers:
+  User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+  Accept-Language: "en-US,en;q=0.5"
+  Accept-Encoding: "gzip, deflate"
+  Connection: "keep-alive"
+
+rate_limit: 1.0  # seconds between requests
+retries: 3
+timeout: 30
+
+# Source reputation scores
+source_reputation:
+  default: 0.8
+  reuters: 0.95
+  ap: 0.95
+  bbc: 0.9
+  cnn: 0.85
+  fox: 0.8
+  yonhap: 0.9
+  kbs: 0.85
+  mbc: 0.85
+  sbs: 0.85
+
+
+

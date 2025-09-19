@@ -1,0 +1,25 @@
+plugins:
+  - id: keyword_mmr
+    stage: keyword
+    name: "MMR Keyword Reranker"
+    entry: ["python","-m","nwwpkg.prep.keyword_mmr","--in","{dedup}","--out","{kyw}","--topk","15"]
+    enabled: true
+    contracts_in: ["clean.dedup.jsonl"]
+    contracts_out: ["kyw.jsonl"]
+    tags: ["text","ranking"]
+  - id: llm_judge
+    stage: score
+    name: "LLM Judge (Optional)"
+    entry: ["python","-m","nwwpkg.fusion.llm_judge","--scores","{scores}","--out","{scores}","--append"]
+    enabled: false
+    contracts_in: ["scores.jsonl"]
+    contracts_out: ["scores.jsonl"]
+    tags: ["llm","optional"]
+  - id: dbn_infer
+    stage: score
+    name: "DBN Time Inference"
+    entry: ["python","-m","nwwpkg.fusion.dbn_infer","--scores","{scores}","--out","{scores}","--append"]
+    enabled: true
+    contracts_in: ["scores.jsonl"]
+    contracts_out: ["scores.jsonl"]
+    tags: ["time","bayes"]

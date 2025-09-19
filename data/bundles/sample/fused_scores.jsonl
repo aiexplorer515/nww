@@ -1,0 +1,24 @@
+{"id": "a1", "stage": "IS", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": NaN, "trend": NaN}
+{"id": "a1", "stage": "IS", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": NaN, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.62, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.736, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.62, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.736, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.627, "trend": 0.116}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.727, "trend": -0.116}
+{"id": "a1", "stage": "IS", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": NaN, "trend": NaN}
+{"id": "a1", "stage": "IS", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": NaN, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.62, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.736, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.62, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.736, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.627, "trend": 0.116}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.727, "trend": -0.116}
+{"id": "a1", "stage": "IS", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": NaN, "trend": NaN}
+{"id": "a1", "stage": "IS", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": NaN, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.62, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.736, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.62, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.736, "trend": NaN}
+{"id": "a1", "stage": "DBN", "score": 0.62, "detail": {"병력 이동": 0.35, "무기 배치": 0.27}, "rep_adj": NaN, "score_DBN": 0.627, "trend": 0.116}
+{"id": "a1", "stage": "DBN", "score": 0.736, "detail": {"병력 이동": 0.736}, "rep_adj": 1.0, "score_DBN": 0.727, "trend": -0.116}

@@ -1,0 +1,17 @@
+contracts:
+  - file: raw.jsonl
+    spec: schema/raw.schema.yaml
+  - file: clean.jsonl
+    spec: schema/clean.schema.yaml
+  - file: clean.dedup.jsonl
+    spec: schema/clean.schema.yaml
+  - file: kyw.jsonl
+    spec: schema/kyw.schema.yaml
+  - file: kyw_boosted.jsonl
+    spec: schema/kyw_boosted.schema.yaml
+  - file: frames.jsonl
+    spec: schema/frames.schema.yaml
+  - file: scores.jsonl
+    spec: schema/scores.schema.yaml
+  - file: alerts.jsonl
+    spec: schema/alerts.schema.yaml

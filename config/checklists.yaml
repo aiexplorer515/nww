@@ -1,0 +1,28 @@
+- topic: border_mobilization
+  title: 국경 인근 병력 동원
+  weight: 1.0
+  signals:
+    - id: mobilize_frame
+      when:
+        any_frames: ["military_mobilization","troop_movement"]
+      score: 0.7
+    - id: large_scale_drills
+      when:
+        any_keywords: ["large","scale","drills","near","border"]
+      score: 0.3
+  combine: noisy_or
+  thresholds: { warn: 0.40, alert: 0.70, crisis: 0.85 }
+
+- topic: artillery_deployment
+  title: 중화기 전개
+  weight: 0.9
+  signals:
+    - id: artillery_kw
+      when: { any_keywords: ["artillery","howitzer","mlrs"] }
+      score: 0.6
+    - id: border_near
+      when: { any_keywords: ["near","border"] }
+      score: 0.2
+  combine: linear
+  linear_weights: {artillery_kw: 0.75, border_near: 0.25}
+  thresholds: { warn: 0.35, alert: 0.60, crisis: 0.80 }

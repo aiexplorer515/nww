@@ -1,0 +1,8 @@
+military_movement: 0.40
+diplomatic_breakdown: 0.30
+economic_sanctions: 0.20
+fake_news: 0.10
+source_reputation:
+  reuters: 1.00
+  ap: 0.98
+  unknown: 0.85

@@ -1,0 +1,13 @@
+{"from": "E1", "to": "E2", "reasons": ["공통 Actor", "시간·공간 근접", "이종 도메인 연결"]}
+{"from": "E1", "to": "E3", "reasons": ["공통 Actor", "이종 도메인 연결"]}
+{"from": "E1", "to": "E4", "reasons": ["공통 Actor", "이종 도메인 연결"]}
+{"from": "E1", "to": "E5", "reasons": ["공통 Actor", "이종 도메인 연결"]}
+{"from": "E1", "to": "E6", "reasons": ["공통 Actor", "시간·공간 근접"]}
+{"from": "E2", "to": "E3", "reasons": ["공통 Actor", "이종 도메인 연결"]}
+{"from": "E2", "to": "E4", "reasons": ["공통 Actor", "이종 도메인 연결"]}
+{"from": "E2", "to": "E6", "reasons": ["공통 Actor", "시간·공간 근접", "이종 도메인 연결"]}
+{"from": "E3", "to": "E4", "reasons": ["공통 Actor", "시간·공간 근접", "이종 도메인 연결"]}
+{"from": "E3", "to": "E5", "reasons": ["시간·공간 근접", "이종 도메인 연결"]}
+{"from": "E3", "to": "E6", "reasons": ["공통 Actor", "이종 도메인 연결"]}
+{"from": "E4", "to": "E5", "reasons": ["시간·공간 근접", "이종 도메인 연결"]}
+{"from": "E4", "to": "E6", "reasons": ["공통 Actor", "이종 도메인 연결"]}

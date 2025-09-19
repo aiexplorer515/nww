@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "url",
+    "title",
+    "published_at",
+    "source",
+    "text",
+    "lang",
+    "country"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    }
+  }
+}

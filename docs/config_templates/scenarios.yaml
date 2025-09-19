@@ -1,0 +1,8 @@
+SCN-001:
+  title: "군사 충돌 위험 고조"
+  pattern:
+    any:
+      - indicators: ["military_movement","diplomatic_breakdown"]
+        min_hits: 2
+  slots: ["actors.primary","location","time_window","triggers"]
+  k_evidence_min: 2

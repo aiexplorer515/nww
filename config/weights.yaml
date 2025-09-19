@@ -1,0 +1,62 @@
+# Indicator weights and patterns for scoring
+indicator_weights:
+  # Korean indicators
+  "병력 이동": 0.8
+  "무기 배치": 0.9
+  "경제 제재": 0.7
+  "외교적 긴장": 0.6
+  "군사 훈련": 0.5
+  "핵 위협": 0.95
+  "미사일 발사": 0.9
+  "군사 동원": 0.85
+  
+  # English indicators
+  "troop movement": 0.8
+  "weapon deployment": 0.9
+  "economic sanctions": 0.7
+  "diplomatic tension": 0.6
+  "military exercise": 0.5
+  "nuclear threat": 0.95
+  "missile launch": 0.9
+  "military mobilization": 0.85
+
+# Indicator patterns for gating
+indicators:
+  "병력 이동":
+    patterns: ["군사 이동", "병력 배치", "군대 이동", "troop movement", "military deployment"]
+    weight: 0.8
+    confidence_threshold: 0.7
+  
+  "무기 배치":
+    patterns: ["무기 배치", "미사일 배치", "weapon deployment", "missile deployment"]
+    weight: 0.9
+    confidence_threshold: 0.8
+  
+  "경제 제재":
+    patterns: ["제재", "경제 제재", "sanctions", "economic sanctions"]
+    weight: 0.7
+    confidence_threshold: 0.6
+  
+  "외교적 긴장":
+    patterns: ["긴장", "대립", "갈등", "tension", "conflict", "dispute"]
+    weight: 0.6
+    confidence_threshold: 0.5
+  
+  "군사 훈련":
+    patterns: ["군사 훈련", "훈련", "military exercise", "training"]
+    weight: 0.5
+    confidence_threshold: 0.4
+
+# Domain weights
+domain_weights:
+  military: 0.8
+  diplomacy: 0.6
+  economy: 0.5
+
+# Language weights
+language_weights:
+  ko: 1.0
+  en: 0.9
+
+
+

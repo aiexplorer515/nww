@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "labels"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "labels": {
+      "type": "object",
+      "required": [
+        "frames",
+        "is_alert"
+      ],
+      "properties": {
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "is_alert": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

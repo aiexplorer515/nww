@@ -1,28 +1,32 @@
-# NWW API + pytest Pack (v1)
+# NWW – 완전 자동화 패키지
 
-## 설치
+## 🔧 설치 및 실행
 ```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip -r requirements.txt
+git clone <repo-url>
+cd NWW
+
+# 원클릭 실행
+run_all.bat
 ```
 
-## API 실행
-```powershell
-# PowerShell
-.un_api.ps1
-# 또는
-uvicorn api.app.main:app --reload --port 8080
-```
+## 📂 구조
+- docs/03_Design/ModuleSpecs → 모듈별 설계 문서(.md)
+- tools/md_to_py.py → 변환기
+- nwwpkg/ → Python 모듈 생성 결과
+- ui/app.py → Streamlit 대시보드
 
-## 엔드포인트
-- `GET /health` → { status: "ok" }
-- `GET /health/ready` → readiness 정보 (stub)
-- `POST /v1/events` → 이벤트 수신 stub
-- `POST /graphql` (strawberry 설치 시) → GraphQL
+## 🚀 실행 흐름
+1. .md → .py 변환 (자동)
+2. Python 패키지(`nwwpkg/`) 생성
+3. Streamlit UI 실행 → 1~12 단계 통합 실행
 
-## 테스트 실행
-```powershell
-python -m pip install pytest httpx
-pytest
-```
+## 🖥️ UI 탭 구성
+- Overview
+- Ingest
+- Scoring
+- Timeline
+- Blocks
+- Events
+- Scenarios
+- Artifacts
+- Ledger

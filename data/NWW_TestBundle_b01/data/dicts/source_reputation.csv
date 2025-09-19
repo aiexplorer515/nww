@@ -1,0 +1,10 @@
+domain,score,region,notes
+reuters.com,0.95,global,tier1
+apnews.com,0.94,global,tier1
+bbc.co.uk,0.93,global,tier1
+yna.co.kr,0.90,kr,tier1
+aljazeera.com,0.88,mena,major
+sputniknews.com,0.30,ru,state-affiliated
+theguardian.com,0.90,global,major
+nikkei.com,0.89,jp,major
+dw.com,0.88,eu,major

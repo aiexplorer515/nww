@@ -1,0 +1,13 @@
+{
+  "MIL-ESC-01": {
+    "ver": "1.0",
+    "rules": [
+      "military_movement",
+      "diplomatic_breakdown"
+    ],
+    "slots": [
+      "actors.primary",
+      "location"
+    ]
+  }
+}

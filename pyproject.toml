@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nwwpkg"
+version = "0.1.0"
+description = "NWW MVP pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+# 의존은 나중에 천천히 추가해도 됨. 최소 가동이 목표면 비워둬도 OK.
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["nwwpkg*"]

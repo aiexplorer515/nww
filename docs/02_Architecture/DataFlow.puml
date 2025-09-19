@@ -1,0 +1,68 @@
+@startuml
+title NWW E2E Pipeline (v1.2 + Extensions)
+
+skinparam shadowing false
+skinparam rectangle {
+  BackgroundColor White
+  BorderColor Black
+}
+skinparam arrow {
+  Thickness 1
+}
+
+rectangle "1) Ingest / Readability\n(URL/File → text)\noutputs: articles.jsonl" as S1
+rectangle "2) Normalize / Clean\noutputs: articles.norm.jsonl" as S2
+rectangle "3) Keywords / Summary / NER / Frames\noutputs: kyw_sum.jsonl" as S3
+rectangle "4) Gating + z/logit\noutputs: gated.jsonl" as S4
+rectangle "5) Scoring\n5-1 IS → scores.jsonl\n5-2 DBN → scores.jsonl\n5-3 LLM → scores.jsonl" as S5
+rectangle "6) Fusion + Calibration + Conformal + Smoothing\noutputs: scores.jsonl(FUSE)" as S6
+rectangle "7) EDS Block Matching\noutputs: block_hits.jsonl" as S7
+rectangle "8) Scenario Build (slots+evidence)\noutputs: scenarios.jsonl + scenario_cards.md" as S8
+rectangle "9) Decider (Alerts)\noutputs: alerts.jsonl" as S9
+rectangle "10) Ledger / Audit (per step)\noutputs: ledger/*.jsonl" as S10
+rectangle "11) UI (Streamlit)\nTabs: Overview/Ingest/Scoring/Timeline/Blocks/Scenarios/Artifacts/Ledger" as S11
+
+S1 --> S2
+S2 --> S3
+S3 --> S4
+S4 --> S5
+S5 --> S6
+S6 --> S7
+S7 --> S8
+S8 --> S9
+S1 --> S10
+S2 --> S10
+S3 --> S10
+S4 --> S10
+S5 --> S10
+S6 --> S10
+S7 --> S10
+S8 --> S10
+S9 --> S10
+
+S6 --> S11
+S7 --> S11
+S8 --> S11
+S9 --> S11
+S10 --> S11
+
+note right of S5
+IS: Σ(weight_i × hit_i × conf_i × source_rep_i)\n
+DBN: time-series smoothing\n
+LLM: evidence-only, no_new_facts, contra flag
+end note
+
+note right of S6
+Fused = w_IS*IS + w_DBN*DBN + w_LLM*LLM\n
+Calibration(Platt/Isotonic) → p_calib\n
+Conformal(α=0.9) → [ci_low, ci_high]\n
+EMA + Hysteresis(up=0.70, down=0.60)
+end note
+
+note right of S8
+Quality: CREDO / FACT / coverage\n
+claims[*].evidence_id is required\n
+multi-lang: ko/en
+end note
+
+@enduml

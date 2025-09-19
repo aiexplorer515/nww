@@ -1,0 +1,15 @@
+name: scores.schema.v1
+required:
+  - id:int|str
+  - subscores.indicator:float
+  - fused_score:float
+types:
+  id: [int, str]
+  subscores: dict
+  subscores.indicator: float|int
+  subscores.dbn: float|int|none
+  subscores.llm: float|int|none
+  fused_score: float|int
+constraints:
+  fused_score: range=[0,1]
+allow_extra: true

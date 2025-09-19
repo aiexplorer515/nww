@@ -1,0 +1,59 @@
+{
+  "military": [
+    "군 병력 이동",
+    "훈련 동원",
+    "포격",
+    "발사",
+    "mobilization",
+    "shelling",
+    "deployment"
+  ],
+  "diplomacy": [
+    "협상 결렬",
+    "대사 소환",
+    "sanction",
+    "talks break down",
+    "summit",
+    "envoy"
+  ],
+  "economy": [
+    "금리 인상",
+    "제재",
+    "무역 제한",
+    "tariff",
+    "currency slump",
+    "bond yield"
+  ],
+  "politics": [
+    "의회 표결",
+    "야권 연대",
+    "cabinet reshuffle",
+    "impeachment"
+  ],
+  "info_ops": [
+    "허위 정보",
+    "가짜 뉴스",
+    "disinformation",
+    "propaganda",
+    "bot network"
+  ],
+  "energy": [
+    "원유 공급",
+    "가스관",
+    "정전",
+    "pipeline disruption"
+  ],
+  "cyber": [
+    "DDoS",
+    "APT",
+    "랜섬웨어",
+    "phishing",
+    "zero-day"
+  ],
+  "sanctions": [
+    "수출 통제",
+    "세컨더리 보이콧",
+    "제재 완화",
+    "blacklist"
+  ]
+}

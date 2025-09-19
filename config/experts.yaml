@@ -1,0 +1,9 @@
+sources:
+  "연합뉴스": {weight: 1.15}
+  "뉴스1":   {weight: 1.05}
+  "커뮤니티": {weight: 0.80}
+experts:
+  "analyst_dungeon": {weight: 1.20}
+defaults:
+  source_weight: 1.00
+  expert_weight: 1.10

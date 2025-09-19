@@ -1,0 +1,13 @@
+# config/indicators.yaml  (UTF-8, BOM 없음)
+combine: linear   # linear | noisy_or
+weights:
+  military: 0.70
+  diplomacy: 0.30
+  economy: 0.20
+  uncertain: -0.10
+alias:
+  military_mobilization: military
+  troop_movement:        military
+  mil:                   military
+  diplo:                 diplomacy
+  econ:                  economy

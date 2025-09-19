@@ -1,0 +1,27 @@
+name: alerts.schema.v1
+required:
+  - id:int|str
+  - level:str
+  - fused_score:float
+  - ci:list
+  - reason:str
+  - evidence:list
+  - t_on:str
+types:
+  id: [int, str]
+  level: str
+  fused_score: float|int
+  ci: list
+  ci[0]: float|int
+  ci[1]: float|int
+  evidence: list
+  evidence[].type: str
+  evidence[].text: str
+  links: list|none
+  t_on: str
+constraints:
+  level: enum=[watch,warning,critical]
+  fused_score: range=[0,1]
+  ci: len=2
+  t_on: iso8601
+allow_extra: true

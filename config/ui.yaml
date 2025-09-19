@@ -1,0 +1,31 @@
+# UI configuration for Streamlit dashboard
+dashboard:
+  title: "🌍 NWW Dashboard"
+  page_title: "NWW - News World Watch"
+  layout: "wide"
+  
+# Default settings
+defaults:
+  threshold: 0.7
+  alpha: 0.3
+  hysteresis: 0.1
+  top_k: 5
+
+# Export settings
+export:
+  formats: ["json", "brief", "zip", "stix"]
+  include_metadata: true
+  include_evidence: true
+
+# Visualization settings
+visualization:
+  theme: "plotly_white"
+  colors:
+    primary: "#1f77b4"
+    secondary: "#ff7f0e"
+    success: "#2ca02c"
+    warning: "#d62728"
+    info: "#9467bd"
+
+
+

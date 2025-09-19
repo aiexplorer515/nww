@@ -1,0 +1,3 @@
+theme: "light"
+tabs: ["Overview","Ingest","Scoring","Timeline","Blocks","Scenarios","Artifacts","Ledger"]
+modes: { region: "domestic" }  # or "international"

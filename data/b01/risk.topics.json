@@ -1,0 +1,22 @@
+{
+  "topics": [
+    {
+      "topic": "artillery_deployment",
+      "n": 1,
+      "avg": 0.5,
+      "ok": 0,
+      "warn": 1,
+      "alert": 0,
+      "crisis": 0
+    },
+    {
+      "topic": "border_mobilization",
+      "n": 1,
+      "avg": 0.3,
+      "ok": 1,
+      "warn": 0,
+      "alert": 0,
+      "crisis": 0
+    }
+  ]
+}

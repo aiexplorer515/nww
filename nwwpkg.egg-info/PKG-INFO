@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: nwwpkg
+Version: 0.1.0
+Summary: NWW MVP pipeline
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# NWW – 완전 자동화 패키지
+
+## 🔧 설치 및 실행
+```powershell
+git clone <repo-url>
+cd NWW
+
+# 원클릭 실행
+run_all.bat
+```
+
+## 📂 구조
+- docs/03_Design/ModuleSpecs → 모듈별 설계 문서(.md)
+- tools/md_to_py.py → 변환기
+- nwwpkg/ → Python 모듈 생성 결과
+- ui/app.py → Streamlit 대시보드
+
+## 🚀 실행 흐름
+1. .md → .py 변환 (자동)
+2. Python 패키지(`nwwpkg/`) 생성
+3. Streamlit UI 실행 → 1~12 단계 통합 실행
+
+## 🖥️ UI 탭 구성
+- Overview
+- Ingest
+- Scoring
+- Timeline
+- Blocks
+- Events
+- Scenarios
+- Artifacts
+- Ledger

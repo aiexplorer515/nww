@@ -1,0 +1,41 @@
+# Scenario configuration for crisis detection
+scenarios:
+  military_conflict:
+    name: "Military Conflict"
+    indicators: ["병력 이동", "무기 배치", "군사 훈련"]
+    threshold: 0.8
+    severity: "high"
+    
+  diplomatic_crisis:
+    name: "Diplomatic Crisis"
+    indicators: ["외교적 긴장", "경제 제재"]
+    threshold: 0.7
+    severity: "medium"
+    
+  economic_warfare:
+    name: "Economic Warfare"
+    indicators: ["경제 제재", "무역 제재"]
+    threshold: 0.6
+    severity: "medium"
+    
+  nuclear_threat:
+    name: "Nuclear Threat"
+    indicators: ["핵 위협", "미사일 발사"]
+    threshold: 0.9
+    severity: "critical"
+
+# Alert thresholds
+alert_thresholds:
+  critical: 0.9
+  high: 0.8
+  medium: 0.7
+  low: 0.6
+
+# Notification settings
+notifications:
+  email: false
+  webhook: false
+  log_level: "INFO"
+
+
+
