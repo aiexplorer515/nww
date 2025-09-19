@@ -1,1 +1,0 @@
-{"event_id": "EVT-20250914-001", "block_ids": ["MIL-ESC-01"], "articles": ["a1"], "actors": ["국가A군"], "location": "regionA", "time_window": ["2025-09-10", "2025-09-14"], "risk_curve": [0.42, 0.58, 0.71], "current_risk": 0.71, "delta": 0.06, "state": "elevated"}

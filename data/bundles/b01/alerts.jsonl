@@ -1,2 +1,0 @@
-{"id": "a1", "level": "warning", "alert_level": "warning", "fused_score": 1.0, "ci": [0.95, 1.0], "reason": "frame.conf 임계 초과(1.00 ≥ 0.7)", "evidence": [{"type": "score", "text": "indicator≈frame.conf"}], "links": [], "t_on": "2025-09-16T18:56:44Z", "date": "2025-09-16T18:56:44Z"}
-{"id": "a2", "level": "warning", "alert_level": "warning", "fused_score": 1.0, "ci": [0.95, 1.0], "reason": "frame.conf 임계 초과(1.00 ≥ 0.7)", "evidence": [{"type": "score", "text": "indicator≈frame.conf"}], "links": [], "t_on": "2025-09-16T18:56:44Z", "date": "2025-09-16T18:56:44Z"}

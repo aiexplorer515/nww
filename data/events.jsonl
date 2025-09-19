@@ -1,7 +1,0 @@
-{"event_id": "E1", "title": "국가A와 국가B 관세 협상 결렬", "actors": ["국가A", "국가B"], "domain": "경제", "date": "2025-09-10", "location": "국경지역"}
-{"event_id": "E2", "title": "국가A 군사훈련 강화", "actors": ["국가A"], "domain": "군사", "date": "2025-09-11", "location": "국경지역"}
-{"event_id": "E3", "title": "국가A 외교 발언 경색", "actors": ["국가A"], "domain": "외교", "date": "2025-09-12", "location": "수도"}
-{"event_id": "E4", "title": "국가A 무기 구매 계약", "actors": ["국가A", "국가C"], "domain": "군수", "date": "2025-09-13", "location": "수도"}
-{"event_id": "E5", "title": "국가B 대규모 시위 발생", "actors": ["국가B"], "domain": "사회", "date": "2025-09-14", "location": "수도"}
-{"event_id": "E6", "title": "국가C와 국가A 무역 갈등 심화", "actors": ["국가A", "국가C"], "domain": "경제", "date": "2025-09-15", "location": "국경지역"}
-{"event_id": "E7", "title": "국가D 해군 훈련 개시", "actors": ["국가D"], "domain": "군사", "date": "2025-09-15", "location": "해역"}
